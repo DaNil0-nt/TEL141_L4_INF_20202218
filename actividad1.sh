@@ -11,7 +11,7 @@ remoto() {
     IP=$1
     SCRIPT=$2
     shift 2
-    ssh -o StrictHostKeyChecking=no $USUARIO@$IP 'bash -s' "$@" < ./$SCRIPT
+    ssh -tt -o StrictHostKeyChecking=no $USUARIO@$IP 'bash -s' "$@" < ./$SCRIPT
 }
 
 
